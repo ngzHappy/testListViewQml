@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>MainWindow.qml</file>
         <file>YScroallBar.qml</file>
+        <file>ScrollViewTest.qml</file>
     </qresource>
 </RCC>
