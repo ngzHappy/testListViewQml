@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>MainWindow.qml</file>
+        <file>YScroallBar.qml</file>
+    </qresource>
+</RCC>
