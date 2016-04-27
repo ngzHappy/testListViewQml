@@ -27,7 +27,7 @@ Rectangle{/*Y scroall bar*/
         anchors.left: parent.left;
 
         y:(function(){
-            if(parent.height>view.contentHeight){
+            if(parent.height>=view.contentHeight){
                 return 0;
             }
             var varPercent=(view.contentY/(view.contentHeight-parent.height));
@@ -45,9 +45,10 @@ Rectangle{/*Y scroall bar*/
         }
 
         onYChanged: {
-            if(scroallBarItemMouseAreaID.pressed===false){return;}
+            if(scroallBarItemMouseAreaID.drag.active===false){return;}
             var varHeight=view.contentHeight-scroallBarID.height;
             if(varHeight<0){return;}
+            if(height>=scroallBarID.height){return;}
             var persent=scroallBarItem.y/(scroallBarID.height-height) ;
             if(persent<0){return;}
             var varY=varHeight*persent;
